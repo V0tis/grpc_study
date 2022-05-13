@@ -49,8 +49,13 @@ function main() {
   } else {
     user = 'world';
   }
+
   client.sayHello({name: user}, function(err, response) {
     console.log('Greeting:', response.message);
+  });
+
+  client.sayHelloAgain({ name: 'you'}, (err, response) => {
+    console.log('Greeting again', response.message)
   });
 }
 
